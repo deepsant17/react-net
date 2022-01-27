@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import './App.css';
 import {CardList} from './Components/card-list/card-list.component';
-
+import SearchBox from './Components/search-box/search-box.component';
 class App extends Component{
   
   constructor(){
@@ -24,7 +24,7 @@ componentDidMount(){
   .includes(searchField.toLowerCase()));
 
   return (<div className="App">
-  <input type='search' placeholder='Search Avtar' onChange={e=>this.setState({searchField:e.target.value})}/>
+  <SearchBox placeholder='Search Avtar' handlechange={e=>this.setState({searchField:e.target.value})}/>
    <CardList avtars= {filterdAvtars}/>
   
    </div>
