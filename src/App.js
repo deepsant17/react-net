@@ -24,6 +24,7 @@ componentDidMount(){
   .includes(searchField.toLowerCase()));
 
   return (<div className="App">
+  <h1>Avtars Of The Earth</h1>
   <SearchBox placeholder='Search Avtar' handlechange={e=>this.setState({searchField:e.target.value})}/>
    <CardList avtars= {filterdAvtars}/>
   
